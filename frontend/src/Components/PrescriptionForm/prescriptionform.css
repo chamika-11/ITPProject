@@ -1,16 +1,17 @@
 /* Prescription Form Styles */
 
 .prescription-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
-  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 18%,
+    rgba(9, 9, 121, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   /* Added margin-top to prevent overlap with the fixed navbar */
-  margin-top: 200px;
-  margin-bottom: 150px; /* Adjust this value based on the height of your navbar */
+
+  /* Adjust this value based on the height of your navbar */
 }
 
 .prescription-card {
@@ -37,7 +38,8 @@ h2 {
   color: #333;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -51,7 +53,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #6c63ff;
   outline: none;
 }

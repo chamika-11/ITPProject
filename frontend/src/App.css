@@ -1,0 +1,12 @@
+.prescription-table {
+  justify-self: center;
+  width: 75%;
+}
+
+.prescription-page {
+  padding: 100px;
+}
+
+.prescription-page h1 {
+  text-align: center;
+}
