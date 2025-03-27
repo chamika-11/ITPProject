@@ -1,0 +1,79 @@
+/* prescriptionview.css */
+.prescription-view-container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.prescription-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.prescription-header h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.prescription-details {
+  font-family: Arial, sans-serif;
+  color: #555;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-section h3 {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.info-section p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.medicines-section {
+  margin-bottom: 20px;
+}
+
+.medicine-details {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+.medicine-details p {
+  margin: 5px 0;
+}
+
+.notes-section {
+  margin-top: 20px;
+}
+
+.notes-section h3 {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.notes-section p {
+  font-size: 1rem;
+}
+
+/* Minimal styling for Doctor and Patient Info */
+.info-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.info-section p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}

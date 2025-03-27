@@ -1,0 +1,144 @@
+/* General Container Styling */
+.prescription-view-container {
+    width: 70%;
+    margin: 30px auto;
+    padding: 30px;
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Section */
+  .prescription-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .prescription-header h2 {
+    font-size: 2.5rem;
+    color: #4caf50;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Prescription Details Section */
+  .prescription-details {
+    font-family: 'Arial', sans-serif;
+    color: #444;
+  }
+  
+  /* Doctor & Patient Info */
+  .info-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 5px solid #4caf50;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-section h3 {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .info-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 8px 0;
+  }
+  
+  /* Diagnosis Section */
+  .diagnosis-section {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #81c784;
+    margin-bottom: 25px;
+  }
+  
+  .diagnosis-section h3 {
+    font-size: 1.5rem;
+    color: #388e3c;
+  }
+  
+  .diagnosis-section p {
+    font-size: 1.2rem;
+    color: #2c6e2d;
+  }
+  
+  /* Medicine Section */
+  .medicines-section {
+    margin-bottom: 30px;
+  }
+  
+  .medicine-details {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .medicine-details p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #4caf50;
+  }
+  
+  /* Notes Section */
+  .notes-section {
+    background-color: #fff3e0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffb74d;
+    margin-top: 30px;
+  }
+  
+  .notes-section h3 {
+    font-size: 1.4rem;
+    color: #ff9800;
+  }
+  
+  .notes-section p {
+    font-size: 1.2rem;
+    color: #f57c00;
+  }
+  
+  /* Follow-Up Section */
+  .follow-up-section {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #64b5f6;
+    margin-top: 25px;
+  }
+  
+  .follow-up-section h3 {
+    font-size: 1.5rem;
+    color: #1976d2;
+  }
+  
+  .follow-up-section p {
+    font-size: 1.2rem;
+    color: #1565c0;
+  }
+  
+  /* Font Size Adjustments for Different Elements */
+  .medicines-section h3,
+  .diagnosis-section h3,
+  .notes-section h3,
+  .follow-up-section h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .medicine-details p,
+  .diagnosis-section p,
+  .notes-section p,
+  .follow-up-section p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  

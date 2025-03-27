@@ -1,0 +1,111 @@
+/* Prescription Form Styles */
+
+.prescription-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
+  height: 100vh;
+  /* Added margin-top to prevent overlap with the fixed navbar */
+  margin-top: 200px;
+  margin-bottom: 150px; /* Adjust this value based on the height of your navbar */
+}
+
+.prescription-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus, textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.medicines-section {
+  margin-top: 20px;
+}
+
+.medicine {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.medicine input {
+  width: calc(100% - 20px);
+  margin-bottom: 5px;
+}
+
+.add-medicine-button,
+.remove-medicine-button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.add-medicine-button:hover,
+.remove-medicine-button:hover {
+  background-color: #5743d2;
+}
+
+.submit-button {
+  background-color: #6c63ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #5743d2;
+}

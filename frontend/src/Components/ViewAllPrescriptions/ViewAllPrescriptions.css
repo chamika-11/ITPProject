@@ -1,0 +1,55 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.prescription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.prescription-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prescription-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.prescription-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.medicine-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.medicine-list li {
+    font-size: 14px;
+    color: #333;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-gray {
+    color: gray;
+    text-align: center;
+}
