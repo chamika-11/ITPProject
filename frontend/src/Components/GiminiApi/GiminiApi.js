@@ -30,12 +30,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
-        <h1 className="text-xl font-bold text-gray-800 mb-4">Gemini AI Prompt</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="container">
+      <div className="prompt-box">
+        <h1 className="prompt-title">Gemini AI Assistant</h1>
+        <form onSubmit={handleSubmit} className="prompt-form">
           <textarea
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="prompt-textarea"
             rows="4"
             placeholder="Enter your prompt..."
             value={prompt}
@@ -44,15 +44,15 @@ export default function App() {
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition"
+            className="submit-btn"
             disabled={loading}
           >
             {loading ? "Generating..." : "Submit"}
           </button>
         </form>
         {response && (
-          <div className="mt-4 p-3 bg-gray-200 rounded-lg">
-            <p className="text-gray-700">{response}</p>
+          <div className="response-box">
+            <p className="response-text">{response}</p>
           </div>
         )}
       </div>

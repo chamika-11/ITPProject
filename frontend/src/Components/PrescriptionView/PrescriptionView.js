@@ -84,10 +84,12 @@ const PrescriptionView = () => {
                 </td>
                 <td>{prescription.notes}</td>
                 <td>
-                  <button onClick={() => deletePrescription(prescription._id)}>
+                  <button className="delete-btn" onClick={() => deletePrescription(prescription._id)}>
                     Delete
                   </button>
-                  <button onClick={handleNavigation}>Update</button>
+                  <button className="update-btn" onClick={handleNavigation}>
+                    Update
+                  </button>
                 </td>
               </tr>
             ))}
