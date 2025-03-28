@@ -9,9 +9,7 @@
     rgba(9, 9, 121, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   );
-  /* Added margin-top to prevent overlap with the fixed navbar */
 
-  /* Adjust this value based on the height of your navbar */
 }
 
 .prescription-card {

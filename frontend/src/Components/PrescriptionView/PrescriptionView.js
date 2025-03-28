@@ -84,13 +84,46 @@ const PrescriptionView = () => {
                 </td>
                 <td>{prescription.notes}</td>
                 <td>
-                  <button className="delete-btn" onClick={() => deletePrescription(prescription._id)}>
-                    Delete
-                  </button>
-                  <button className="update-btn" onClick={handleNavigation}>
-                    Update
-                  </button>
-                </td>
+                <button
+                  className="delete-btn"
+                  onClick={() => deletePrescription(prescription._id)}
+                  style={{
+                    backgroundColor: '#e74c3c',
+                    color: '#fff',
+                    padding: '8px 16px',
+                    fontSize: '14px',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: '500',
+                    transition: 'background-color 0.3s ease, transform 0.2s ease',
+                    marginRight: '10px',
+                  }}
+                  onMouseEnter={(e) => (e.target.style.backgroundColor = '#c0392b')}
+                  onMouseLeave={(e) => (e.target.style.backgroundColor = '#e74c3c')}
+                >
+                  Delete
+                </button>
+                <button
+                  className="update-btn"
+                  onClick={handleNavigation}
+                  style={{
+                    backgroundColor: '#3498db',
+                    color: '#fff',
+                    padding: '8px 16px',
+                    fontSize: '14px',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: '500',
+                    transition: 'background-color 0.3s ease, transform 0.2s ease',
+                  }}
+                  onMouseEnter={(e) => (e.target.style.backgroundColor = '#2980b9')}
+                  onMouseLeave={(e) => (e.target.style.backgroundColor = '#3498db')}
+                >
+                  Update
+                </button>
+              </td>
               </tr>
             ))}
           </tbody>
