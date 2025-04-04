@@ -158,3 +158,47 @@ footer a {
   }
 }
 /* footer  */
+
+/* Prescription Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #22a6b3;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+  background-color: #e9e9e9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Message and No Results */
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}

@@ -8,8 +8,8 @@ const PrescriptionView = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleNavigation = () => {
-    navigate("/UpdatePrescription"); // Navigate to the "About" component
+  const handleNavigation = (id) => {
+    navigate(`/UpdatePrescription/${id}`);
   };
 
   // Fetch prescriptions from the backend
@@ -60,7 +60,7 @@ const PrescriptionView = () => {
       {prescriptions.length === 0 ? (
         <p>No prescriptions found.</p>
       ) : (
-        <table class="prescription-table table table-striped">
+        <table className="prescription-table table table-striped">
           <thead>
             <tr>
               <th>Patient Name</th>
@@ -68,6 +68,7 @@ const PrescriptionView = () => {
               <th scope="col">Date Issued</th>
               <th scope="col">Valid Until</th>
               <th scope="col">Notes</th>
+              <th scope="col">Medicines</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
@@ -84,46 +85,67 @@ const PrescriptionView = () => {
                 </td>
                 <td>{prescription.notes}</td>
                 <td>
-                <button
-                  className="delete-btn"
-                  onClick={() => deletePrescription(prescription._id)}
-                  style={{
-                    backgroundColor: '#e74c3c',
-                    color: '#fff',
-                    padding: '8px 16px',
-                    fontSize: '14px',
-                    border: 'none',
-                    borderRadius: '6px',
-                    cursor: 'pointer',
-                    fontWeight: '500',
-                    transition: 'background-color 0.3s ease, transform 0.2s ease',
-                    marginRight: '10px',
-                  }}
-                  onMouseEnter={(e) => (e.target.style.backgroundColor = '#c0392b')}
-                  onMouseLeave={(e) => (e.target.style.backgroundColor = '#e74c3c')}
-                >
-                  Delete
-                </button>
-                <button
-                  className="update-btn"
-                  onClick={handleNavigation}
-                  style={{
-                    backgroundColor: '#3498db',
-                    color: '#fff',
-                    padding: '8px 16px',
-                    fontSize: '14px',
-                    border: 'none',
-                    borderRadius: '6px',
-                    cursor: 'pointer',
-                    fontWeight: '500',
-                    transition: 'background-color 0.3s ease, transform 0.2s ease',
-                  }}
-                  onMouseEnter={(e) => (e.target.style.backgroundColor = '#2980b9')}
-                  onMouseLeave={(e) => (e.target.style.backgroundColor = '#3498db')}
-                >
-                  Update
-                </button>
-              </td>
+                  {prescription.medicines.length > 0 ? (
+                    <ul>
+                      {prescription.medicines.map((medicine, index) => (
+                        <li key={index}>
+                          <strong>{medicine.medicineName}</strong> - {medicine.dosage}, {medicine.quantity} units, {medicine.frequency}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    "No medicines"
+                  )}
+                </td>
+                <td>
+                  <button
+                    className="delete-btn"
+                    onClick={() => deletePrescription(prescription._id)}
+                    style={{
+                      backgroundColor: "#e74c3c",
+                      color: "#fff",
+                      padding: "8px 16px",
+                      fontSize: "14px",
+                      border: "none",
+                      borderRadius: "6px",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      transition: "background-color 0.3s ease, transform 0.2s ease",
+                      marginRight: "10px",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#c0392b")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#e74c3c")
+                    }
+                  >
+                    Delete
+                  </button>
+                  <button
+                    className="update-btn"
+                    onClick={() => handleNavigation(prescription._id)}
+                    style={{
+                      backgroundColor: "#3498db",
+                      color: "#fff",
+                      padding: "8px 16px",
+                      fontSize: "14px",
+                      border: "none",
+                      borderRadius: "6px",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      transition: "background-color 0.3s ease, transform 0.2s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.backgroundColor = "#2980b9")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.target.style.backgroundColor = "#3498db")
+                    }
+                  >
+                    Update
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

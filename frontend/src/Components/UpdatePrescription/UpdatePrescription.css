@@ -57,7 +57,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-.submit-button {
+/* .submit-button {
   background-color: #6c63ff;
   color: white;
   padding: 12px 20px;
@@ -67,8 +67,91 @@ textarea {
   font-size: 16px;
   width: 100%;
   margin-top: 20px;
+} */
+
+/* .submit-button:hover {
+  background-color: #5743d2;
+} */
+
+.update-prescription-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px;
 }
 
-.submit-button:hover {
-  background-color: #5743d2;
+.update-prescription-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
 }
+
+.update-prescription-form h1 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+} */
+
+/* .button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-group .submit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-group .submit-button:hover {
+  background-color:   blue;
+}
+
+.button-group .cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-group .cancel-button:hover {
+  background-color: #d32f2f;
+} */

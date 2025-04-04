@@ -29,9 +29,6 @@ const Navbar = () => {
           <Link to="/PrescriptionView" className="nav-link">
             Patients Prescription
           </Link>
-          <Link to="/UpdatePrescription" className="nav-link">
-            Update Prescription
-          </Link>
           <Link to="/search" className="nav-link">
             Search Prescription
           </Link>

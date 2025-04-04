@@ -22,7 +22,7 @@ function App() {
               <Route path="/prescription" element={<PrescriptionForm />} />
               <Route path="/PrescriptionView" element={<PrescriptionView />} />
               <Route
-                path="/UpdatePrescription"
+                path="/UpdatePrescription/:id"
                 element={<UpdatePrescription />}
               />
               <Route path="/GiminiApi" element={<GiminiApi />} />

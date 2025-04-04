@@ -15,9 +15,9 @@ const {
   });
   
   const generationConfig = {
-    temperature: 1,
-    topP: 0.95,
-    topK: 40,
+    temperature: 0.4,
+    topP: 0.90,
+    topK: 50,
     maxOutputTokens: 8192,
     responseMimeType: "text/plain",
   };
@@ -25,8 +25,23 @@ const {
   async function run(prompt) {
     const chatSession = model.startChat({
       generationConfig,
-      history: [
-      ],
+      history: [{
+        role: "user",
+        parts:[
+          {
+            text: "Your are chat assistant for a clinical management system. only answer questions realted to medical and hospital.and if user ask about medical or hospital realted question give them simple and short answers.if user ask any unrelated question, then say 'I am not able to answer this question,please ask only about medical realted questions'",
+          },
+        ],
+      },
+      {
+        role: "user",
+        parts: [
+          {
+            text: "Okay,I'm ready to answer your medical and hospital questions.ask me anything about that",
+          },
+        ],
+      }],
+      
     });
   
     const result = await chatSession.sendMessage(prompt);

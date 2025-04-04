@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import "./pss.css";
+import "./PrescriptionSearch.css";
 
 const PrescriptionSearch = () => {
   const [patientId, setPatientId] = useState("");
@@ -29,25 +29,14 @@ const PrescriptionSearch = () => {
 
   return (
     <div>
-      {/*<h1>Search Prescriptions by Patient ID</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Enter Patient ID"
-          value={patientId}
-          onChange={(e) => setPatientId(e.target.value)}
-        />
-        <button onClick={handleSearch}>Search</button>
-      </div>*/}
-
       <div className="my-search">
-        <div class="search-box">
-          <button class="btn-search" onClick={handleSearch}>
+        <div className="search-box">
+          <button className="btn-search" onClick={handleSearch}>
             <FontAwesomeIcon icon={faSearch} />
           </button>
           <input
             type="text"
-            class="input-search"
+            className="input-search"
             placeholder="Enter Patient ID"
             value={patientId}
             onChange={(e) => setPatientId(e.target.value)}
@@ -67,6 +56,7 @@ const PrescriptionSearch = () => {
               <th>Date Issued</th>
               <th>Valid Until</th>
               <th>Notes</th>
+              <th>Medicines</th>
             </tr>
           </thead>
           <tbody>
@@ -81,6 +71,19 @@ const PrescriptionSearch = () => {
                   {new Date(prescription.validUntil).toLocaleDateString()}
                 </td>
                 <td>{prescription.notes}</td>
+                <td>
+                  {prescription.medicines.length > 0 ? (
+                    <ul>
+                      {prescription.medicines.map((medicine, index) => (
+                        <li key={index}>
+                          <strong>{medicine.medicineName}</strong> - {medicine.dosage}, {medicine.quantity} units, {medicine.frequency}, {medicine.instructions}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    "No medicines"
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
